@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.login()
+
+# Login
+GET   /cadastro                     controllers.Application.cadastro()
+POST  /                             controllers.Application.loginSubmetido()
+POST  /cadastro                     controllers.Application.cadastroSubmetido()
+#POST  /selCarona                    controllers.Application.logoff(id: Long)
+
+#Pos-Login
+
+#GET   /selCarona                    controllers.Application.selecionarAcao(id:  Long)
+#POST  /selCarona                    controllers.Application.selecionadaAcao(id: Long)
+#GET   /espec                        controllers.Application.especifica(id: Long, kind: String)
+#POST  /espec                        controllers.Application.especificado(id: Long, kind: String)
+#GET   /mostrarCaronas               controllers.Application.mostrarCaronas(id: Long, option: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
